@@ -22,10 +22,13 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Terminal 1 — Django
 cd django_voice_agent
 
-pip install django /n
-python manage.py migrate     # only needed once \n 
+pip install django
+
+python manage.py migrate     # only needed once
+
 python manage.py runserver   # → localhost:8000
 
 ## Terminal 2 — React
 npm install
+
 npm run dev                  # → localhost:5173
