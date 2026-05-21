@@ -87,20 +87,6 @@ def _detect_specific_scheme(text: str) -> dict | None:
 # Stage 2 — LLM for eligibility field extraction
 # ---------------------------------------------------------------------------
 
-# OLD CODE - uses system prompt (doesn't work with welfare-agent-ft):
-# _PROMPT_PATH = os.path.join(os.path.dirname(__file__), "system_prompt.txt")
-# def _load_system_prompt() -> str:
-#     try:
-#         with open(_PROMPT_PATH, "r", encoding="utf-8") as f:
-#             return f.read().strip()
-#     except FileNotFoundError:
-#         return ""
-# SYSTEM_PROMPT = _load_system_prompt()
-
-# NEW CODE - NO system prompt (matches fine-tuned model training format!)
-# The welfare-agent-ft model was trained WITHOUT a system prompt.
-# Format: <|begin_of_text|><|start_header_id|>user<|end_header_id|>{input}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
-
 
 def detect_intent(hindi_text: str) -> dict:
     """
