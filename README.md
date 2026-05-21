@@ -18,10 +18,12 @@ If you are developing a production application, we recommend using TypeScript wi
 # Schemes_Eligibility_with_Voice_input_output
 
 # HOW TO RUN???
+
 ## Terminal 1 — Django
 cd django_voice_agent
-pip install django
-python manage.py migrate     # only needed once
+
+pip install django /n
+python manage.py migrate     # only needed once \n 
 python manage.py runserver   # → localhost:8000
 
 ## Terminal 2 — React
